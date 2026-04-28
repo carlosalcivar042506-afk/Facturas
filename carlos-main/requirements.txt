@@ -1,8 +1,0 @@
-flask
-google-genai
-python-dotenv
-pypdf
-flask-cors
-pymupdf
-openpyxl
-pandas
