@@ -876,7 +876,6 @@ async function startProcess(file) {
     fillForm(data);
     document.getElementById('btnSave').disabled = false;
     toast(`Extracción completada en ${secs}s ✓`, 'ok');
-    await loadPoolStatus();
   } catch(err) {
     setStage('err', '✗ Error de extracción', err.message);
     toast(err.message, 'err');
@@ -978,7 +977,6 @@ async function processPtrMultipleSeq(files) {
       statusEl.textContent = `✓ ${data.nombre_comercial||'?'} · ${data.categoria||'?'} · key: ${data._key_used||''}`;
       setPtrStage('ok', `✓ ${f.name}`, `${saved} PTRs guardados`);
       updatePtrBadges();
-      await loadPoolStatus();
     } catch(err) {
       itemEl.className   = 'ptr-queue-item error';
       itemEl.querySelector('span').textContent = '❌';
@@ -1014,7 +1012,6 @@ async function startPtrProcess(file) {
     fillPtrForm(data);
     document.getElementById('ptrBtnSave').disabled = false;
     toast(`PTR extraído en ${secs}s ✓`, 'ok');
-    await loadPoolStatus();
   } catch(err) {
     setPtrStage('err', '✗ Error extrayendo PTR', err.message);
     toast(err.message, 'err');
