@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyc
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Entorno virtual
+venv/
+env/
+.env
+.venv/
+
+# Variables de entorno (nunca subir al repo)
+.env
+.env.local
+.dev.vars
+
+# Logs
+*.log
+logs/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node (sobrantes del template previo)
+node_modules/
+dist/
+.wrangler/
+package-lock.json
+
+# Wrangler / Cloudflare (no aplica para este proyecto Python)
+wrangler.jsonc
+vite.config.ts
+tsconfig.json
+src/
+public/
+ecosystem.config.cjs
